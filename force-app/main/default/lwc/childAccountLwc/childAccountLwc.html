@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Child Component">
+        <table>
+            <thead><tr>
+                <th>Select</th>
+                <th>AccountId</th>
+                <th>Account Name</th>
+            </tr></thead>
+            <template for:each={accData.data} for:item="accItem">
+                <tr key={accItem.Id}>
+                    <td><lightning-input type="radio" name="radioButtonSelect" value={accItem.Id} onchange={handleChangeRadio}></lightning-input></td>
+                    <td>{accItem.Id}</td>
+                    <td>{accItem.Name}</td>
+                </tr>
+            </template>
+        </table>
+    </lightning-card>
+    
+</template>

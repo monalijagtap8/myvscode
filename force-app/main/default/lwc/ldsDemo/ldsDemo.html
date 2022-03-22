@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="Record form:Read" icon-name="standard:account">
+      <lightning-record-form 
+      record-id={recordId} 
+      object-api-name={objectApiName}
+      mode="readOnly"
+      layout-type="Full"></lightning-record-form>
+  </lightning-card>  
+  <lightning-card title="Record form:View"  icon-name="standard:account">
+    <lightning-record-form 
+    onsuccess={handleSuccess}
+    onerror={handleError}
+    onload={handleLoad}
+    record-id={recordId} 
+    object-api-name={objectApiName}
+    mode="view"
+    layout-type="Full"></lightning-record-form>
+</lightning-card>  
+<lightning-card title="Record form:Edit"  icon-name="standard:account">
+    <lightning-record-form 
+    record-id={recordId} 
+    object-api-name={objectApiName}
+    mode="edit"
+    layout-type="Full"></lightning-record-form>
+</lightning-card>  
+</template>
